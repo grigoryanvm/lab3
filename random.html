@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Угадай число!</h1>
+    <p>Сыграем в игру? Я загадаю число от 1 до 100, а ты попробуй угадать!</p>
+    <label></label>
+    <input id="number" type="text">
+    <button type="submit" id="btn">Проверить</button>
+    <p id="help"></p>
+     <button  id="game" style="display:block;">Снова</button>
+    <script>
+         let number=document.getElementById("number");
+         let btn=document.getElementById("btn");
+         let help=document.getElementById("help");
+         let randNum;
+          const LS=localStorage;
+         document.addEventListener('DOMContentLoaded',function(){
+        if(LS.getItem('randnum')){
+            randNum=LS.getItem('randnum')}
+        else{
+        randNum = Math.floor(Math.random() * 100);
+        LS.setItem('randnum',randNum)}
+     let userNum;
+     btn.onclick = function (evt) {
+     evt.preventDefault();
+     userNum = number.value;
+
+     if(isNaN(userNum)){
+        help.innerHTML="Введите число от 0 до 100";
+     }
+     else if(userNum<randNum){
+         help.innerHTML="Больше...";
+     }
+     else if(userNum>randNum){
+         help.innerHTML="Меньше...";
+     }
+     else if(userNum==randNum){
+         help.innerHTML="Угадал!";
+       return;
+
+       }};})
+    let again=document.getElementById("game");
+again.addEventListener("click",function(event){
+    LS.clear();
+    window.location.reload();
+})
+    
+
+     
+   
+  
+     
+
+
+
+
+        //  let input, random = Math.floor(Math.random() * 10);
+ 
+        // while (input = prompt("Введите число от 0 до 9:")) {
+        //     if (isNaN(input))
+        //         alert("Введите число!");
+        //     else if (input > random)
+        //         alert("Меньше!");
+        //     else if (input < random)
+        //         alert("Больше!");
+        //     else if (input == random) {
+        //         alert("Правильно!");
+        //         break;
+        //     }
+        // }
+        
+    </script>
+</body>
+</html>

@@ -40,7 +40,7 @@ header img{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .telnum-discr{
-    width: 150px;
+    width: 200px;
 }
 .telnum span{
     color: white;
@@ -182,20 +182,22 @@ padding: 20px;
 }
 .toy button{
    float: right;
-   margin-right: 15px;
    border-radius: 10px;
    background-color: rgba(0, 13, 255, 0.402);
    border: 1px;
    color: rgb(240, 244, 247);
    font-weight: 600;
    font-size: 16px;
-   padding: 7px;
+   align-self: flex-end;
+   padding: 5px;
+   margin: 5px;
 }
 .contacts{
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     margin:0px 80px ;
+    
   
 }
 .contacts-otdel{
@@ -217,6 +219,7 @@ padding: 20px;
 footer{
  
     background-image: url("Slice 3.png");
+ 
     /* background-color: rgba(7, 176, 52, 0.572); */
     display: flex;
     justify-content: space-around;
@@ -307,4 +310,115 @@ background-position:center;
 display: flex;
     flex-direction: column;
     align-items: center;
+}
+.big-img img{
+    position:fixed;
+    align-items: center;
+   top: 80px;
+   left: 450px;
+   width:500px;
+   height:500px;
+  
+ 
+}
+.big-img{
+    display: none;
+}
+.theme{
+    margin-left: 50px;
+}
+.theme button{
+
+    background-color: rgba(131, 202, 226, 0.714);
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    border-radius: 15px;
+}
+.cart {
+    border-radius: 50%;
+    width: 55px;
+    height:55px;
+    border: none;
+    background-color: #61ec92;
+    cursor: pointer;
+    position: fixed;
+    top: 50px;
+    right:25px;
+}
+.catalogCart{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.toys{
+    display: flex;
+    align-items: center;
+}
+.toys:hover{
+    background-color: aliceblue;
+}
+.toys-img{
+    width: 60px;
+    height:60px;
+    border-radius: 15px;
+    margin: 5px;
+}
+.tittle-products{
+    margin-right: 15px;
+     font-family: 'Comfortaa', sans-serif;
+     color: rgba(0, 0, 0, 0.587);
+}
+.price-products{
+
+        margin: 5px;
+        
+        font-weight: 600;
+        color: rgb(236, 141, 52);
+        font-size: 20px;
+}
+.descpiption-products{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+.cart-window{
+    width: 320px;
+    max-height: 350px;
+    display: none;
+    background-color: #eef2ee;
+    position:fixed;
+    top: 70px;
+    right: 70px;
+    z-index: 2;
+    overflow-y: auto;
+
+}
+.close-btn{
+    width: 20px;
+    height: 20px;
+   cursor: pointer;
+}
+.close-btn-toys{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    
+    margin-left: auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cart-btn{
+    float: right;
+        border-radius: 10px;
+        background-color: rgba(0, 13, 255, 0.402);
+        border: 1px;
+        color: rgb(240, 244, 247);
+        font-size: 15px;
+        align-self: flex-end;
+        padding: 5px;
+        margin: 5px;
 }
